@@ -2,25 +2,14 @@ const express = require("express")
 const app = express()
 
 app.all("*", function(req, res, next){
-    console.log("passamos pelo app, irruuuuuuu!!!!")
+    console.log("passamos por aqui com foco, força e fé, huehuehue")
     next()
 })
 //rotas
 const index = require("./routes/index")
-const alunas = require('./routes/alunasRoute')
-const professoras = require('./routes/professorasRoute')
-
-app.use(function(req, res, next) { //resolvendo problema de CORS
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    )
-    next()
-})
+const alunas = require('./routes/tarefasRoute')
 
 app.use('/', index)
-app.use("/alunas", alunas)
-app.use("/professoras", professoras)
+app.use("/tarefas", alunas)
 
 module.exports = app
