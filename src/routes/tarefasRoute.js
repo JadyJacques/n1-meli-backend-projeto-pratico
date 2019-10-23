@@ -7,5 +7,7 @@ router.get("/", controller.get)
 
 
 router.get("/:id", controller.getById)
+router.get("/:nome/buscar", controller.getByName)
+router.get("/:concluidos/filtrar", controller.getStatus)
 
 module.exports = router

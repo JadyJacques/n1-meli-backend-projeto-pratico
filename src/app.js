@@ -7,9 +7,9 @@ app.all("*", function(req, res, next){
 })
 //rotas
 const index = require("./routes/index")
-const alunas = require('./routes/tarefasRoute')
+const tarefas = require('./routes/tarefasRoute')
 
 app.use('/', index)
-app.use("/tarefas", alunas)
+app.use("/tarefas",tarefas)
 
 module.exports = app
