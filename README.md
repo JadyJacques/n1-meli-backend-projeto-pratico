@@ -1,5 +1,6 @@
 # n1-meli-backend-projeto-pratico
 projeto prático a fim de exercitar todo o conteúdo dado nas aulas da {reprograma} no curso de back end dentro do meli.
+Utilizando NodeJs (nodemon, express).
 
 # API Tarefas
 
